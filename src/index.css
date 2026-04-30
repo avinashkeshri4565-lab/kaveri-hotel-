@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --font-outfit: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-bree: "Bree Serif", serif;
+
+  --color-brand-orange: #f28c28;
+  --color-brand-green: #1b5e20;
+  --color-brand-brown: #4a3728;
+  --color-brand-cream: #fff9f0;
+  --color-brand-border: #f3e5ab;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  body {
+    @apply font-outfit antialiased text-brand-brown bg-brand-cream;
+  }
+  h1, h2, h3, h4 {
+    @apply font-outfit font-black tracking-tight;
+  }
+}
+
+.blur-full {
+  filter: blur(100px);
+}
+
+.bento-card {
+  @apply bg-white rounded-[32px] border border-brand-border shadow-sm overflow-hidden transition-all duration-300;
+}
